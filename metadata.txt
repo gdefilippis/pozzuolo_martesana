@@ -1,0 +1,39 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=pozzuolo_martesana
+qgisMinimumVersion=3.0
+description=This plugin allows to manage field data collected at the Pozzuolo Martesana (Milan, Italy) test site
+version=0.2
+author=Giovanna De Filippis - ECHN-Italy
+email=giovanna.df1989@libero.it
+
+about=This plugin allows to manage field data collected at the Pozzuolo Martesana (Milan, Italy) test site. This plugin has been developed for the purposes of the "Hydrogeology over the groundwater table: field measurements, data management and modelling in the vadose zone" course, organized by the ECHN-Italy group within the framework of the Flowpath 2019 congress (Milan, 12-14 June 2019; http://www.flowpath2019.polimi.it/).
+
+tracker=http://bugs
+repository=http://repo
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=Field Data Analytics, Vadose Zone, Modelling, Reporting, Flowpath 2019, ECHN-Italy
+
+homepage=http://www.iahitaly.it/site/gruppi/echn-italy-early-career-hydrogeologist-network
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+

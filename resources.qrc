@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/pozzuolo_martesana" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

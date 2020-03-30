@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pozzuolo_martesanaDockWidgetBase</class>
+ <widget class="QDockWidget" name="pozzuolo_martesanaDockWidgetBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>763</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manage sensors data</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Select the SpatiaLite DB to be queried/updated:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="path_DB">
+        <property name="font">
+         <font>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="browse_DB">
+        <property name="text">
+         <string>Browse...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>726</width>
+         <height>726</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="tabs">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Update SpatiaLite DB</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="2" column="0">
+             <widget class="QProgressBar" name="progressBar_1">
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QDialogButtonBox" name="buttonBox_1">
+              <property name="standardButtons">
+               <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Select the text file containing data recorded by tensiometers:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="browse_tensio">
+                <property name="text">
+                 <string>Browse...</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLineEdit" name="path_tensio">
+                <property name="font">
+                 <font>
+                  <italic>true</italic>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLineEdit" name="path_moist">
+                <property name="font">
+                 <font>
+                  <italic>true</italic>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QPushButton" name="browse_moist">
+                <property name="text">
+                 <string>Browse...</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>Select the text file containing meteo-climate data:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QPushButton" name="browse_meteo">
+                <property name="text">
+                 <string>Browse...</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>Select the text file containing data about properties of the unsaturated zone:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLineEdit" name="path_meteo">
+                <property name="font">
+                 <font>
+                  <italic>true</italic>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item row="4" column="0">
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>350</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="0">
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>Application of the AquiMod code</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_23">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_22">
+              <item row="0" column="2">
+               <layout class="QGridLayout" name="gridLayout_21">
+                <item row="0" column="0">
+                 <layout class="QGridLayout" name="gridLayout_19">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_31">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>First day of simulation:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QDateEdit" name="first">
+                    <property name="displayFormat">
+                     <string>yyyy-MM-dd</string>
+                    </property>
+                    <property name="calendarPopup">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item row="1" column="0">
+                 <layout class="QGridLayout" name="gridLayout_20">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_32">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>Last day of simulation:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QDateEdit" name="last">
+                    <property name="displayFormat">
+                     <string>yyyy-MM-dd</string>
+                    </property>
+                    <property name="calendarPopup">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item row="0" column="0">
+               <layout class="QGridLayout" name="gridLayout_18">
+                <item row="0" column="0">
+                 <layout class="QGridLayout" name="gridLayout_6">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_5">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>Select the time-step length:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="time_step">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <horstretch>20</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>20</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>70</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QComboBox" name="combobox">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>70</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="currentText">
+                     <string/>
+                    </property>
+                    <property name="minimumContentsLength">
+                     <number>0</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item row="1" column="0">
+                 <layout class="QGridLayout" name="gridLayout_7">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_17">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>Simulation mode:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QComboBox" name="sim_mode">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>70</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="currentText">
+                     <string/>
+                    </property>
+                    <property name="minimumContentsLength">
+                     <number>0</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item row="0" column="1">
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>681</width>
+                <height>17</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0">
+             <widget class="QGroupBox" name="soil_zone">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>525</width>
+                <height>120</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Soil profile</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_14">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Baseflow index:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="baseflow_min">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2" colspan="2">
+                <widget class="QLineEdit" name="baseflow_max">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4" colspan="3">
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>Wilting point:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="7" colspan="2">
+                <widget class="QLineEdit" name="wilting_point_min">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="9" colspan="2">
+                <widget class="QLineEdit" name="wilting_point_max">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Field capacity:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="field_capacity_min">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2" colspan="2">
+                <widget class="QLineEdit" name="field_capacity_max">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="4" colspan="4">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Maximum root depth (mm):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="8" colspan="2">
+                <widget class="QLineEdit" name="root_min">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>100.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="10">
+                <widget class="QLineEdit" name="root_max">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>100.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" colspan="3">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Depletion factor of the vegetation:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3" colspan="2">
+                <widget class="QLineEdit" name="depletion_min">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="5">
+                <widget class="QLineEdit" name="depletion_max">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="6" colspan="4">
+                <widget class="QLabel" name="label_18">
+                 <property name="text">
+                  <string>Parameters variation (%):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="10">
+                <widget class="QLineEdit" name="perturb_soil">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QGroupBox" name="unsat_zone">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>525</width>
+                <height>120</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Unsaturated zone</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_15">
+               <item row="0" column="0" colspan="4">
+                <widget class="QLabel" name="label_15">
+                 <property name="text">
+                  <string>Maximum number of time-steps taken for soil drainage to reach the groundwater:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4">
+                <widget class="QLineEdit" name="max_ts">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>Weibull shape parameter:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="shape_par_min">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLineEdit" name="shape_par_max">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Weibull scale parameter:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="scale_par_min">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLineEdit" name="scale_par_max">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QLabel" name="label_23">
+                 <property name="text">
+                  <string>Parameters variation (%):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="4">
+                <widget class="QLineEdit" name="perturb_unsat">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QGroupBox" name="sat_zone">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>525</width>
+                <height>120</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Saturated zone</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_16">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_25">
+                 <property name="text">
+                  <string>Width of the basin (m):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" colspan="2">
+                <widget class="QLineEdit" name="deltaX">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1000.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4" colspan="3">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Height of the bottom of the aquifer (m msl):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="7">
+                <widget class="QLineEdit" name="bottom">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>0.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="3">
+                <widget class="QLabel" name="label_16">
+                 <property name="text">
+                  <string>Aquifer storage coefficient (%):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3" colspan="2">
+                <widget class="QLineEdit" name="SS_min">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5" colspan="2">
+                <widget class="QLineEdit" name="SS_max">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" colspan="2">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>K of the aquifer (m/d):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2" colspan="2">
+                <widget class="QLineEdit" name="K_min">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>86.4</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="4" colspan="2">
+                <widget class="QLineEdit" name="K_max">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>86.4</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="6">
+                <widget class="QLabel" name="label_24">
+                 <property name="text">
+                  <string>Parameters variation (%):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="7">
+                <widget class="QLineEdit" name="perturb_sat">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QGroupBox" name="sol_params">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>525</width>
+                <height>120</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Solver parameters</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_17">
+               <item row="0" column="0" colspan="2">
+                <widget class="QLabel" name="deltaX_3">
+                 <property name="text">
+                  <string>Number of runs of the model:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2" colspan="2">
+                <widget class="QLineEdit" name="runs">
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4">
+                <widget class="QLabel" name="label_20">
+                 <property name="text">
+                  <string>Spin-up period:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QLineEdit" name="spinup">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_19">
+                 <property name="text">
+                  <string>Objective funtion:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1" colspan="5">
+                <widget class="QComboBox" name="obj_function"/>
+               </item>
+               <item row="2" column="0" colspan="3">
+                <widget class="QLabel" name="label_21">
+                 <property name="text">
+                  <string>Threshold for the objective funtion:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QLineEdit" name="threshold">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1.0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="4" colspan="2">
+                <widget class="QLabel" name="label_22">
+                 <property name="text">
+                  <string>Maximum number of acceptable models:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="6">
+                <widget class="QLineEdit" name="max_models">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="7" column="0">
+             <widget class="QProgressBar" name="progressBar_2">
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QDialogButtonBox" name="buttonBox_2">
+              <property name="standardButtons">
+               <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>Automated reporting</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_13">
+            <item row="9" column="0">
+             <spacer name="verticalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>350</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="8" column="0">
+             <widget class="QDialogButtonBox" name="buttonBox_3">
+              <property name="standardButtons">
+               <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QProgressBar" name="progressBar_3">
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="0">
+               <widget class="Line" name="line_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_30">
+                <property name="text">
+                 <string>Geographical setting</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="Line" name="line_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="0" column="0">
+               <widget class="Line" name="line_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_26">
+                <property name="text">
+                 <string>First page of the report</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="Line" name="line">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_27">
+                <property name="text">
+                 <string>Select your logo:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="path_logo">
+                <property name="font">
+                 <font>
+                  <italic>true</italic>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="browse_logo">
+                <property name="text">
+                 <string>Browse...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0">
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_28">
+                <property name="text">
+                 <string>Names and Institutions of the Authors of the report:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="authors">
+                <property name="text">
+                 <string>Name Surname (Institution), Name Surname (Institution), ...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="5" column="0">
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_29">
+                <property name="text">
+                 <string>Select an image for your study area:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="path_img">
+                <property name="font">
+                 <font>
+                  <italic>true</italic>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="browse_img">
+                <property name="text">
+                 <string>Browse...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="6" column="0">
+             <spacer name="verticalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="3" column="0">
+             <spacer name="verticalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox_1</sender>
+   <signal>rejected()</signal>
+   <receiver>pozzuolo_martesanaDockWidgetBase</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>426</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox_2</sender>
+   <signal>rejected()</signal>
+   <receiver>pozzuolo_martesanaDockWidgetBase</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox_3</sender>
+   <signal>rejected()</signal>
+   <receiver>pozzuolo_martesanaDockWidgetBase</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

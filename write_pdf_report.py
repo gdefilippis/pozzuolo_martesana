@@ -50,7 +50,7 @@ def first_page(logo,authors):
     styles.add(ParagraphStyle(name='Center', alignment=TA_CENTER, leading=24))
 
     #Add title
-    title='Appendix 1 - Characterization of the monitoring site located in Pozzuolo Martesana (Milan, northern Italy)'
+    title='Characterization of the monitoring site located in Pozzuolo Martesana (Milan, northern Italy)'
     ptext='<font size=24>%s</font>' %title
     first_page.append(Paragraph(ptext, styles["Center"]))
 
@@ -67,7 +67,7 @@ def first_page(logo,authors):
 
     #Add date
     date=datetime.today().strftime('%d/%m/%Y')
-    ptext='<font size=12>%s</font>' %date
+    ptext='<font size=12>%s</font>' %(date[6:]+'-'+date[3:5]+'-'+date[0:2])
     first_page.append(Paragraph(ptext, styles["Center"]))
 
     #Add a page break
@@ -95,7 +95,7 @@ def setting_section(image):
     setting_section.append(Spacer(1, 30))
 
     #Add text
-    ptext='<font size=12>The monitoring site of Pozzuolo Martesana is located east of Milan and it is managed by CAP Holding S.p.A. . \
+    ptext='<font size=12>The monitoring site of Pozzuolo Martesana is located east of Milan (northern Italy) and it is managed by CAP Holding S.p.A. \
         The monitoring site is equipped for the analysis of deposition, infiltration and redistribution of atmospheric contaminants in the unsaturated zone, under the scientific coordination of Università degli Studi di Milano.</font>'
     setting_section.append(Paragraph(ptext, styles["Justify"]))
 
@@ -132,8 +132,8 @@ def climate_section(rain_min_date,rain_max_date,rain_max_value,rain_avg_value,ra
     climate_section.append(Spacer(1, 30))
 
     #Add text
-    ptext='<font size=12>The rainfall gauge station installed in the study area records rainfall values (in mm) with a time frequency of 10\' from %s to %s. \
-        In this period, a maximum value of %s mm was recorded and a cumulated value of %s mm over the whole period.</font>' %(rain_min_date,rain_max_date,rain_max_value,rain_sum_value)
+    ptext='<font size=12>The rainfall gauge station installed in the study area records rainfall values (in mm) with a time frequency of 10 minutes from %s to %s. \
+        In this period, a maximum value of %s mm was recorded and a cumulated value of %s mm over the whole period.</font>' %(rain_min_date[6:]+'-'+rain_min_date[3:5]+'-'+rain_min_date[0:2],rain_max_date[6:]+'-'+rain_max_date[3:5]+'-'+rain_max_date[0:2],rain_max_value,rain_sum_value)
     climate_section.append(Paragraph(ptext, styles["Justify"]))
 
     #Add text
@@ -149,13 +149,13 @@ def climate_section(rain_min_date,rain_max_date,rain_max_value,rain_avg_value,ra
 
     if missing_flag=='no':
         #Add text
-        ptext='<font size=12>The meteorological station installed in the study area records average air temperature (in °C) with a time frequency of 10\' from %s to %s. \
-            In this period, a minumum value of %s °C, a maximum value of %s °C, and an average value of %s °C were recorded.</font>' %(temp_min_date,temp_max_date,temp_min_value,temp_max_value,temp_avg_value)
+        ptext='<font size=12>The meteorological station installed in the study area records average air temperature (in °C) with a time frequency of 10 minutes from %s to %s. \
+            In this period, a minimum value of %s °C, a maximum value of %s °C, and an average value of %s °C were recorded.</font>' %(temp_min_date[6:]+'-'+temp_min_date[3:5]+'-'+temp_min_date[0:2],temp_max_date[6:]+'-'+temp_max_date[3:5]+'-'+temp_max_date[0:2],temp_min_value,temp_max_value,temp_avg_value)
     else:
         #Add text
-        ptext='<font size=12>The meteorological station installed in the study area records average air temperature (in °C) with a time frequency of 10\' from %s to %s. \
+        ptext='<font size=12>The meteorological station installed in the study area records average air temperature (in °C) with a time frequency of 10 minutes from %s to %s. \
             In this period, some gaps occur, due to missing or untrusted air temperature values. \
-            For the aims of the AquiMod model, such gaps will be filled using linearly interpolated air temperature data. </font>' %(temp_min_date,temp_max_date)
+            For the aims of the AquiMod model, such gaps will be filled using linearly interpolated air temperature data. </font>' %(temp_min_date[6:]+'-'+temp_min_date[3:5]+'-'+temp_min_date[0:2],temp_max_date[6:]+'-'+temp_max_date[3:5]+'-'+temp_max_date[0:2])
     climate_section.append(Paragraph(ptext, styles["Justify"]))
 
     #Add text
@@ -192,15 +192,15 @@ def pore_section(T3_min_date,T3_max_date,T3_max_value,T3_max_value_date,T5_max_v
 
     if missing_flag=='no':
         #Add text
-        ptext='<font size=12>The tensiometers installed show soil pore pressure values (in cBar) recorded at different depths with a frequency of 10\' from %s to %s. \
+        ptext='<font size=12>The tensiometers installed show soil pore pressure values (in cBar) recorded at different depths with a frequency of 10 minutes from %s to %s. \
                                 Specifically, the tensiometer T3 is installed at a depth of 40-48 cm below the ground surface, the tensiometer T5 is installed at a depth of 37-45 cm below the ground surface and the tensiometer T8 is installed at a depth of 20-28 cm below the ground surface.\
-                                In the period considered here, peaks of pore pressures were recorded at different depths.</font>'
+                                In the period considered here, peaks of pore pressures were recorded at different depths.</font>' %(T3_min_date[6:]+'-'+T3_min_date[3:5]+'-'+T3_min_date[0:2],T3_max_date[6:]+'-'+T3_max_date[3:5]+'-'+T3_max_date[0:2])
     else:
         #Add text
-        ptext='<font size=12>The tensiometers installed show soil pore pressure values (in cBar) recorded at different depths with a frequency of 10\' from %s to %s. \
+        ptext='<font size=12>The tensiometers installed show soil pore pressure values (in cBar) recorded at different depths with a frequency of 10 minutes from %s to %s. \
                                 Specifically, the tensiometer T3 is installed at a depth of 40-48 cm below the ground surface, the tensiometer T5 is installed at a depth of 37-45 cm below the ground surface and the tensiometer T8 is installed at a depth of 20-28 cm below the ground surface.\
                                 In the period considered here, peaks of pore pressures were recorded at different depths.\
-                                Furthermore, some gaps occur, due to missing or untrusted pore pressure values.</font>' %(T3_min_date,T3_max_date)
+                                Furthermore, some gaps occur, due to missing or untrusted pore pressure values.</font>' %(T3_min_date[6:]+'-'+T3_min_date[3:5]+'-'+T3_min_date[0:2],T3_max_date[6:]+'-'+T3_max_date[3:5]+'-'+T3_max_date[0:2])
     pore_section.append(Paragraph(ptext, styles["Justify"]))
 
     #Add text
@@ -236,14 +236,14 @@ def moisture_section(ADD0_min_date,ADD0_max_date,ADD0_max_value,ADD0_max_value_d
     moisture_section.append(Spacer(1, 30))
 
     #Add text
-    ptext='<font size=12>The soil moisture sensors installed show values of volumetric water content (in percentage) at different depths with a frequency of 10\' from %s to %s.\
-                            Specifically, sensors TDR_0, TDR_1 and TDR_2 are installed at the same point at depths of 20 cm, 40 cm and 80 cm below the ground surface, respectively. Similarly, sensors TDR_3, TDR_4 and TDR_5 are installed at the same point at depths of 20 cm, 40 cm and 80 cm below the ground surface, respectively.</font>' %(ADD0_min_date,ADD0_max_date)
+    ptext='<font size=12>The soil moisture sensors installed show values of volumetric water content (in percentage) at different depths with a frequency of 10 minutes from %s to %s.\
+                            Specifically, sensors TDR_0, TDR_1 and TDR_2 are installed at the same point at depths of 20 cm, 40 cm and 80 cm below the ground surface, respectively. Similarly, sensors TDR_3, TDR_4 and TDR_5 are installed at the same point at depths of 20 cm, 40 cm and 80 cm below the ground surface, respectively.</font>' %(ADD0_min_date[6:]+'-'+ADD0_min_date[3:5]+'-'+ADD0_min_date[0:2],ADD0_max_date[6:]+'-'+ADD0_max_date[3:5]+'-'+ADD0_max_date[0:2])
     moisture_section.append(Paragraph(ptext, styles["Justify"]))
 
     if missing_flag=='no':
         #Add text
         ptext='<font size=12>Regarding sensors TDR_0, TDR_1 and TDR_2, peaks of soil moisture were recorded at different depths.\
-                                The TDR_0 sensor recorded a maximum value of %s on %s. The TDR_1 sensor recorded a maximum value of %s on %s. The TDR_2 sensor recorded a maximum value of %s on %s.</font>' %(round(ADD0_max_value,2),ADD0_max_value_date,round(ADD1_max_value,2),ADD1_max_value_date,round(ADD2_max_value,2),ADD2_max_value_date)
+                                The TDR_0 sensor recorded a maximum value of %s on %s. The TDR_1 sensor recorded a maximum value of %s on %s. The TDR_2 sensor recorded a maximum value of %s on %s.</font>' %(round(ADD0_max_value,2),ADD0_max_value_date[6:]+'-'+ADD0_max_value_date[3:5]+'-'+ADD0_max_value_date[0:2],round(ADD1_max_value,2),ADD1_max_value_date[6:]+'-'+ADD1_max_value_date[3:5]+'-'+ADD1_max_value_date[0:2],round(ADD2_max_value,2),ADD2_max_value_date[6:]+'-'+ADD2_max_value_date[3:5]+'-'+ADD2_max_value_date[0:2])
     else:
         #Add text
         ptext='<font size=12>Regarding sensors TDR_0, TDR_1 and TDR_2, peaks of soil moisture were recorded at different depths.\
@@ -265,7 +265,7 @@ def moisture_section(ADD0_min_date,ADD0_max_date,ADD0_max_value,ADD0_max_value_d
     if missing_flag=='no':
         #Add text
         ptext='<font size=12>Similarly, sensors TDR_3, TDR_4 and TDR_5 recorded peaks of soil moisture at different depths.\
-                                The TDR_3 sensor recorded a maximum value of %s on %s. The TDR_4 sensor recorded a maximum value of %s on %s. The TDR_5 sensor recorded a maximum value of %s on %s.</font>' %(round(ADD3_max_value,2),ADD3_max_value_date,round(ADD4_max_value,2),ADD4_max_value_date,round(ADD5_max_value,2),ADD5_max_value_date)
+                                The TDR_3 sensor recorded a maximum value of %s on %s. The TDR_4 sensor recorded a maximum value of %s on %s. The TDR_5 sensor recorded a maximum value of %s on %s.</font>' %(round(ADD3_max_value,2),ADD3_max_value_date[6:]+'-'+ADD3_max_value_date[3:5]+'-'+ADD3_max_value_date[0:2],round(ADD4_max_value,2),ADD4_max_value_date[6:]+'-'+ADD4_max_value_date[3:5]+'-'+ADD4_max_value_date[0:2],round(ADD5_max_value,2),ADD5_max_value_date[6:]+'-'+ADD5_max_value_date[3:5]+'-'+ADD5_max_value_date[0:2])
     else:
         #Add text
         ptext='<font size=12>Similarly, sensors TDR_3, TDR_4 and TDR_5 recorded peaks of soil moisture at different depths.\
@@ -305,14 +305,14 @@ def aquimod_section(simulation_mode,obs_dates,obs_delta):
     aquimod_section.append(Spacer(1, 30))
 
     #Add text
-    ptext='<font size=12>In order to model the aquifer within the study area, including the unsaturated zone, the AquiMode code was applied.\
+    ptext='<font size=12>In order to model the aquifer within the study area, including the unsaturated zone, the AquiMod code was applied.\
                             The code was run in "%s" mode, in order to obtain an estimate of the water level over the simulation period.\
-                            The climate data available were discretized in time, according to the following scheme, starting from 04/02/2019:</font>' %(simulation_mode)
+                            The climate data available were discretized in time, according to the following scheme, starting from 2019-02-04:</font>' %(simulation_mode)
     aquimod_section.append(Paragraph(ptext, styles["Justify"]))
 
     #data contains all the elements of each row of the time discretization table
     data= [['Time-step','From','To','Length (days)']]
-    data.append([1,obs_dates[0],obs_dates[1],obs_delta[1]])
+    data.append([1,obs_dates[0][6:]+'-'+obs_dates[0][3:5]+'-'+obs_dates[0][0:2],obs_dates[1][6:]+'-'+obs_dates[1][3:5]+'-'+obs_dates[1][0:2],obs_delta[1]])
     #i iterates over the length of the obs_dates list minus one
     for i in range(1,len(obs_dates)-1):
         #Update the data list
@@ -320,7 +320,7 @@ def aquimod_section(simulation_mode,obs_dates,obs_delta):
         if len(day)==1:
             day='0'+str(int(obs_dates[i][0:2])+1)
         starting_date=day+obs_dates[i][2:len(obs_dates)+1]
-        data.append([i+1,starting_date,obs_dates[i+1],obs_delta[i+1]])
+        data.append([i+1,starting_date[6:]+'-'+starting_date[3:5]+'-'+starting_date[0:2],obs_dates[i+1][6:]+'-'+obs_dates[i+1][3:5]+'-'+obs_dates[i+1][0:2],obs_delta[i+1]])
     #Build the table
     t=Table(data)
     aquimod_section.append(t)
